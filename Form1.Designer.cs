@@ -63,6 +63,7 @@ namespace Sprint3
             this.registerButton.TabIndex = 1;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // label1
             // 
@@ -128,15 +129,16 @@ namespace Sprint3
             // logInToolStripMenuItem
             // 
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
-            this.logInToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logInToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.logInToolStripMenuItem.Text = "Log In";
             this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
             // 
             // registerToolStripMenuItem
             // 
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            this.registerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.registerToolStripMenuItem.Text = "Register";
+            this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -149,7 +151,7 @@ namespace Sprint3
             // confirmExitToolStripMenuItem
             // 
             this.confirmExitToolStripMenuItem.Name = "confirmExitToolStripMenuItem";
-            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.confirmExitToolStripMenuItem.Text = "Confirm Exit";
             this.confirmExitToolStripMenuItem.Click += new System.EventHandler(this.confirmExitToolStripMenuItem_Click);
             // 
@@ -161,6 +163,7 @@ namespace Sprint3
             this.supportButton.TabIndex = 7;
             this.supportButton.Text = "Customer Support";
             this.supportButton.UseVisualStyleBackColor = true;
+            this.supportButton.Click += new System.EventHandler(this.supportButton_Click);
             // 
             // MainForm
             // 

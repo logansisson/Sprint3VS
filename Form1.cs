@@ -38,5 +38,21 @@ namespace Sprint3
         {
             logInButton_Click(sender, e);
         }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+        }
+
+        private void registerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            registerButton_Click(sender, e);
+        }
+
+        private void supportButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is not yet functional.");
+        }
     }
 }
