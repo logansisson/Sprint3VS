@@ -42,6 +42,8 @@ namespace Sprint3
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.confirmExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.returnButton = new System.Windows.Forms.Button();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +52,7 @@ namespace Sprint3
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 123);
+            this.label1.Location = new System.Drawing.Point(359, 350);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 37);
             this.label1.TabIndex = 0;
@@ -60,7 +62,7 @@ namespace Sprint3
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(257, 259);
+            this.label2.Location = new System.Drawing.Point(254, 410);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 1;
@@ -70,7 +72,7 @@ namespace Sprint3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(257, 319);
+            this.label3.Location = new System.Drawing.Point(254, 470);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 24);
             this.label3.TabIndex = 2;
@@ -79,7 +81,7 @@ namespace Sprint3
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(398, 259);
+            this.usernameTextBox.Location = new System.Drawing.Point(395, 410);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(183, 26);
             this.usernameTextBox.TabIndex = 0;
@@ -87,7 +89,7 @@ namespace Sprint3
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(398, 319);
+            this.passwordTextBox.Location = new System.Drawing.Point(395, 470);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(183, 26);
             this.passwordTextBox.TabIndex = 4;
@@ -96,7 +98,7 @@ namespace Sprint3
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(398, 398);
+            this.button1.Location = new System.Drawing.Point(313, 551);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 55);
             this.button1.TabIndex = 5;
@@ -106,6 +108,7 @@ namespace Sprint3
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -118,7 +121,8 @@ namespace Sprint3
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logInToolStripMenuItem});
+            this.logInToolStripMenuItem,
+            this.returnToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -126,7 +130,7 @@ namespace Sprint3
             // logInToolStripMenuItem
             // 
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
-            this.logInToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.logInToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logInToolStripMenuItem.Text = "Log In";
             this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
             // 
@@ -148,12 +152,30 @@ namespace Sprint3
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sprint3.Properties.Resources.fours;
-            this.pictureBox1.Location = new System.Drawing.Point(369, 507);
+            this.pictureBox1.Location = new System.Drawing.Point(373, 100);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(205, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // returnButton
+            // 
+            this.returnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnButton.Location = new System.Drawing.Point(505, 551);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(134, 55);
+            this.returnButton.TabIndex = 8;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // LogInForm
             // 
@@ -162,6 +184,7 @@ namespace Sprint3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(966, 707);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passwordTextBox);
@@ -197,5 +220,7 @@ namespace Sprint3
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem confirmExitToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button returnButton;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
     }
 }

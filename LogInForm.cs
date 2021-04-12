@@ -85,5 +85,15 @@ namespace Sprint3
         {
             button1_Click(sender, e);
         }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
+            confirmExitToolStripMenuItem_Click(sender, e);
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            returnButton_Click(sender, e);
+        }
     }
 }

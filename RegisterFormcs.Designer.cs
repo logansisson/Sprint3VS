@@ -42,7 +42,6 @@ namespace Sprint3
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.continueButton = new System.Windows.Forms.Button();
-            this.emailComboBox = new System.Windows.Forms.ComboBox();
             this.cardNumTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.expiryDateTextBox = new System.Windows.Forms.TextBox();
@@ -61,6 +60,8 @@ namespace Sprint3
             this.continueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.confirmExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnButton = new System.Windows.Forms.Button();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -158,7 +159,7 @@ namespace Sprint3
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.Location = new System.Drawing.Point(383, 235);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(182, 29);
+            this.emailTextBox.Size = new System.Drawing.Size(285, 29);
             this.emailTextBox.TabIndex = 3;
             // 
             // phoneTextBox
@@ -172,29 +173,13 @@ namespace Sprint3
             // 
             // continueButton
             // 
-            this.continueButton.Location = new System.Drawing.Point(435, 598);
+            this.continueButton.Location = new System.Drawing.Point(327, 602);
             this.continueButton.Name = "continueButton";
             this.continueButton.Size = new System.Drawing.Size(117, 43);
             this.continueButton.TabIndex = 11;
             this.continueButton.Text = "Continue";
             this.continueButton.UseVisualStyleBackColor = true;
             this.continueButton.Click += new System.EventHandler(this.continueButton_Click);
-            // 
-            // emailComboBox
-            // 
-            this.emailComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.emailComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailComboBox.FormattingEnabled = true;
-            this.emailComboBox.Items.AddRange(new object[] {
-            "@hotmail.com",
-            "@outlook.com",
-            "@gmail.com",
-            "@yahoo.com",
-            "@protonmail.com"});
-            this.emailComboBox.Location = new System.Drawing.Point(571, 235);
-            this.emailComboBox.Name = "emailComboBox";
-            this.emailComboBox.Size = new System.Drawing.Size(173, 28);
-            this.emailComboBox.TabIndex = 4;
             // 
             // cardNumTextBox
             // 
@@ -332,6 +317,7 @@ namespace Sprint3
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -344,7 +330,8 @@ namespace Sprint3
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.continueToolStripMenuItem});
+            this.continueToolStripMenuItem,
+            this.returnToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -352,7 +339,7 @@ namespace Sprint3
             // continueToolStripMenuItem
             // 
             this.continueToolStripMenuItem.Name = "continueToolStripMenuItem";
-            this.continueToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.continueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.continueToolStripMenuItem.Text = "Continue";
             this.continueToolStripMenuItem.Click += new System.EventHandler(this.continueToolStripMenuItem_Click);
             // 
@@ -367,9 +354,26 @@ namespace Sprint3
             // confirmExitToolStripMenuItem
             // 
             this.confirmExitToolStripMenuItem.Name = "confirmExitToolStripMenuItem";
-            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.confirmExitToolStripMenuItem.Text = "Confirm Exit";
             this.confirmExitToolStripMenuItem.Click += new System.EventHandler(this.confirmExitToolStripMenuItem_Click);
+            // 
+            // returnButton
+            // 
+            this.returnButton.Location = new System.Drawing.Point(536, 602);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(117, 43);
+            this.returnButton.TabIndex = 21;
+            this.returnButton.Text = "Return";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // RegisterForm
             // 
@@ -378,6 +382,7 @@ namespace Sprint3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(976, 676);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.ccvTextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox3);
@@ -386,7 +391,6 @@ namespace Sprint3
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cardNumTextBox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.emailComboBox);
             this.Controls.Add(this.continueButton);
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.emailTextBox);
@@ -429,7 +433,6 @@ namespace Sprint3
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Button continueButton;
-        private System.Windows.Forms.ComboBox emailComboBox;
         private System.Windows.Forms.TextBox cardNumTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox expiryDateTextBox;
@@ -448,5 +451,7 @@ namespace Sprint3
         private System.Windows.Forms.ToolStripMenuItem continueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem confirmExitToolStripMenuItem;
+        private System.Windows.Forms.Button returnButton;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
     }
 }

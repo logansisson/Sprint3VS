@@ -136,41 +136,19 @@ namespace Sprint3
             hiphopRadioButton_CheckedChanged(sender, e);
         }
 
-        private void displayCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (displayCheckBox.Checked)
-            {
-                usernameLabel.Visible = true;
-                passwordLabel.Visible = true;
-                tierLabel.Visible = true;
-                emailLabel.Visible = true;
-                phoneLabel.Visible = true;
-                paymentInfoLabel.Visible = true;
-            }
-            else
-            {
-                usernameLabel.Visible = false;
-                passwordLabel.Visible = false;
-                tierLabel.Visible = false;
-                emailLabel.Visible = false;
-                phoneLabel.Visible = false;
-                paymentInfoLabel.Visible = false;
-            }
-        }
-
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             logoutButton_Click(sender, e);
         }
 
-        private void showAccountInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void displayButton_Click(object sender, EventArgs e)
         {
-            displayCheckBox.Checked = true;
+            MessageBox.Show($"Username: {LogInForm.username} \n Email: {emailLabel.Text} \n Tier: {tierLabel.Text} \n Phone Number: {phoneLabel.Text} \n ");
         }
 
-        private void hideAccountInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void showAccountInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            displayCheckBox.Checked = false;
+            displayButton_Click(sender, e);
         }
     }
 }

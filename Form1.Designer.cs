@@ -50,7 +50,7 @@ namespace Sprint3
             // 
             // logInButton
             // 
-            this.logInButton.Location = new System.Drawing.Point(433, 324);
+            this.logInButton.Location = new System.Drawing.Point(439, 471);
             this.logInButton.Name = "logInButton";
             this.logInButton.Size = new System.Drawing.Size(94, 41);
             this.logInButton.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace Sprint3
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(433, 417);
+            this.registerButton.Location = new System.Drawing.Point(439, 564);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(94, 41);
             this.registerButton.TabIndex = 1;
@@ -72,17 +72,17 @@ namespace Sprint3
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 153);
+            this.label1.Location = new System.Drawing.Point(393, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 37);
+            this.label1.Size = new System.Drawing.Size(186, 37);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Welcome to Fours LLC";
+            this.label1.Text = "Welcome to";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(214, 221);
+            this.label2.Location = new System.Drawing.Point(220, 368);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(538, 25);
             this.label2.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace Sprint3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(251, 330);
+            this.label3.Location = new System.Drawing.Point(257, 477);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 24);
             this.label3.TabIndex = 4;
@@ -102,7 +102,7 @@ namespace Sprint3
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(300, 423);
+            this.label4.Location = new System.Drawing.Point(306, 570);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 24);
             this.label4.TabIndex = 5;
@@ -172,7 +172,7 @@ namespace Sprint3
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sprint3.Properties.Resources.fours;
-            this.pictureBox1.Location = new System.Drawing.Point(371, 527);
+            this.pictureBox1.Location = new System.Drawing.Point(384, 166);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(204, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
