@@ -47,18 +47,24 @@ namespace Sprint3
             reader.Read();
             if (usernameTextBox.Text != "" || passwordTextBox.Text != "")
             {
-                if (usernameTextBox.Text == (reader["username"].ToString()) && passwordTextBox.Text.Equals(reader["password"].ToString()))
+                try
                 {
-                    username = usernameTextBox.Text;
-                    TrendingAnalyticsForm trendingAnalyticsForm = new TrendingAnalyticsForm();
-                    trendingAnalyticsForm.Show();
-                    this.Close();
+                    if (usernameTextBox.Text == (reader["username"].ToString()) && passwordTextBox.Text.Equals(reader["password"].ToString()))
+                    {
+                        username = usernameTextBox.Text;
+                        TrendingAnalyticsForm trendingAnalyticsForm = new TrendingAnalyticsForm();
+                        trendingAnalyticsForm.Show();
+                        this.Close();
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Invalid Login. Please try again.");
-                }
 
+                    MessageBox.Show("Invalid Login. Please try again.");
+                    passwordTextBox.Clear();
+                    usernameTextBox.Focus();
+                    usernameTextBox.SelectAll();
+                }
                 connection.Close();
             }
             else
