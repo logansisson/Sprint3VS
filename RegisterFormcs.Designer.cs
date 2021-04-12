@@ -29,6 +29,7 @@ namespace Sprint3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -351,7 +352,7 @@ namespace Sprint3
             // continueToolStripMenuItem
             // 
             this.continueToolStripMenuItem.Name = "continueToolStripMenuItem";
-            this.continueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.continueToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.continueToolStripMenuItem.Text = "Continue";
             this.continueToolStripMenuItem.Click += new System.EventHandler(this.continueToolStripMenuItem_Click);
             // 
@@ -366,7 +367,7 @@ namespace Sprint3
             // confirmExitToolStripMenuItem
             // 
             this.confirmExitToolStripMenuItem.Name = "confirmExitToolStripMenuItem";
-            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.confirmExitToolStripMenuItem.Text = "Confirm Exit";
             this.confirmExitToolStripMenuItem.Click += new System.EventHandler(this.confirmExitToolStripMenuItem_Click);
             // 
@@ -398,6 +399,7 @@ namespace Sprint3
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";

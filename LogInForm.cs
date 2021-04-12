@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using MySql.Data;
 
 
 namespace Sprint3
@@ -62,7 +63,7 @@ namespace Sprint3
             }
             else
             {
-                MessageBox.Show("Username or password cannot be blank. Please try again.");
+                MessageBox.Show("Username or password cannot be blank! Please try again.");
                 usernameTextBox.Focus();
             }
         }

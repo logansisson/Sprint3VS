@@ -30,6 +30,7 @@ namespace Sprint3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrendingAnalyticsForm));
             this.label1 = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,17 +50,17 @@ namespace Sprint3
             this.trackLabel = new System.Windows.Forms.Label();
             this.logoutButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.hiphopRadioButton = new System.Windows.Forms.RadioButton();
-            this.countryRadioButton = new System.Windows.Forms.RadioButton();
             this.punkRadioButton = new System.Windows.Forms.RadioButton();
+            this.countryRadioButton = new System.Windows.Forms.RadioButton();
+            this.hiphopRadioButton = new System.Windows.Forms.RadioButton();
             this.listensLabel = new System.Windows.Forms.Label();
             this.displayCheckBox = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showAccountInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hideAccountInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -248,18 +249,16 @@ namespace Sprint3
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select a Genre:";
             // 
-            // hiphopRadioButton
+            // punkRadioButton
             // 
-            this.hiphopRadioButton.AutoSize = true;
-            this.hiphopRadioButton.Checked = true;
-            this.hiphopRadioButton.Location = new System.Drawing.Point(18, 36);
-            this.hiphopRadioButton.Name = "hiphopRadioButton";
-            this.hiphopRadioButton.Size = new System.Drawing.Size(62, 17);
-            this.hiphopRadioButton.TabIndex = 0;
-            this.hiphopRadioButton.TabStop = true;
-            this.hiphopRadioButton.Text = "Hip hop";
-            this.hiphopRadioButton.UseVisualStyleBackColor = true;
-            this.hiphopRadioButton.CheckedChanged += new System.EventHandler(this.hiphopRadioButton_CheckedChanged);
+            this.punkRadioButton.AutoSize = true;
+            this.punkRadioButton.Location = new System.Drawing.Point(18, 106);
+            this.punkRadioButton.Name = "punkRadioButton";
+            this.punkRadioButton.Size = new System.Drawing.Size(50, 17);
+            this.punkRadioButton.TabIndex = 2;
+            this.punkRadioButton.Text = "Punk";
+            this.punkRadioButton.UseVisualStyleBackColor = true;
+            this.punkRadioButton.CheckedChanged += new System.EventHandler(this.punkRadioButton_CheckedChanged);
             // 
             // countryRadioButton
             // 
@@ -272,16 +271,18 @@ namespace Sprint3
             this.countryRadioButton.UseVisualStyleBackColor = true;
             this.countryRadioButton.CheckedChanged += new System.EventHandler(this.countryRadioButton_CheckedChanged);
             // 
-            // punkRadioButton
+            // hiphopRadioButton
             // 
-            this.punkRadioButton.AutoSize = true;
-            this.punkRadioButton.Location = new System.Drawing.Point(18, 106);
-            this.punkRadioButton.Name = "punkRadioButton";
-            this.punkRadioButton.Size = new System.Drawing.Size(50, 17);
-            this.punkRadioButton.TabIndex = 2;
-            this.punkRadioButton.Text = "Punk";
-            this.punkRadioButton.UseVisualStyleBackColor = true;
-            this.punkRadioButton.CheckedChanged += new System.EventHandler(this.punkRadioButton_CheckedChanged);
+            this.hiphopRadioButton.AutoSize = true;
+            this.hiphopRadioButton.Checked = true;
+            this.hiphopRadioButton.Location = new System.Drawing.Point(18, 36);
+            this.hiphopRadioButton.Name = "hiphopRadioButton";
+            this.hiphopRadioButton.Size = new System.Drawing.Size(62, 17);
+            this.hiphopRadioButton.TabIndex = 0;
+            this.hiphopRadioButton.TabStop = true;
+            this.hiphopRadioButton.Text = "Hip hop";
+            this.hiphopRadioButton.UseVisualStyleBackColor = true;
+            this.hiphopRadioButton.CheckedChanged += new System.EventHandler(this.hiphopRadioButton_CheckedChanged);
             // 
             // listensLabel
             // 
@@ -323,35 +324,35 @@ namespace Sprint3
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showAccountInfoToolStripMenuItem,
             this.hideAccountInfoToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // showAccountInfoToolStripMenuItem
             // 
             this.showAccountInfoToolStripMenuItem.Name = "showAccountInfoToolStripMenuItem";
-            this.showAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.showAccountInfoToolStripMenuItem.Text = "Show Account Info";
             this.showAccountInfoToolStripMenuItem.Click += new System.EventHandler(this.showAccountInfoToolStripMenuItem_Click);
             // 
             // hideAccountInfoToolStripMenuItem
             // 
             this.hideAccountInfoToolStripMenuItem.Name = "hideAccountInfoToolStripMenuItem";
-            this.hideAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hideAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.hideAccountInfoToolStripMenuItem.Text = "Hide Account Info";
             this.hideAccountInfoToolStripMenuItem.Click += new System.EventHandler(this.hideAccountInfoToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // TrendingAnalyticsForm
             // 
@@ -377,6 +378,7 @@ namespace Sprint3
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TrendingAnalyticsForm";
             this.Text = "Trending Analytics";

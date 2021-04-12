@@ -29,6 +29,7 @@ namespace Sprint3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.logInButton = new System.Windows.Forms.Button();
             this.registerButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -178,6 +179,7 @@ namespace Sprint3
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.logInButton);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Fours LLC";
