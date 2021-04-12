@@ -71,6 +71,8 @@ namespace Sprint3
         private void confirmExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
 
         private void logInToolStripMenuItem_Click(object sender, EventArgs e)

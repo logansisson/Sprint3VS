@@ -43,12 +43,14 @@ namespace Sprint3
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.confirmExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supportButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // logInButton
             // 
-            this.logInButton.Location = new System.Drawing.Point(426, 398);
+            this.logInButton.Location = new System.Drawing.Point(433, 324);
             this.logInButton.Name = "logInButton";
             this.logInButton.Size = new System.Drawing.Size(94, 41);
             this.logInButton.TabIndex = 0;
@@ -58,7 +60,7 @@ namespace Sprint3
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(426, 491);
+            this.registerButton.Location = new System.Drawing.Point(433, 417);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(94, 41);
             this.registerButton.TabIndex = 1;
@@ -70,7 +72,7 @@ namespace Sprint3
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(316, 227);
+            this.label1.Location = new System.Drawing.Point(323, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(346, 37);
             this.label1.TabIndex = 2;
@@ -80,7 +82,7 @@ namespace Sprint3
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(207, 295);
+            this.label2.Location = new System.Drawing.Point(214, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(538, 25);
             this.label2.TabIndex = 3;
@@ -90,7 +92,7 @@ namespace Sprint3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(244, 404);
+            this.label3.Location = new System.Drawing.Point(251, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 24);
             this.label3.TabIndex = 4;
@@ -100,7 +102,7 @@ namespace Sprint3
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(293, 497);
+            this.label4.Location = new System.Drawing.Point(300, 423);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 24);
             this.label4.TabIndex = 5;
@@ -108,6 +110,7 @@ namespace Sprint3
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
@@ -166,11 +169,23 @@ namespace Sprint3
             this.supportButton.UseVisualStyleBackColor = true;
             this.supportButton.Click += new System.EventHandler(this.supportButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sprint3.Properties.Resources.fours;
+            this.pictureBox1.Location = new System.Drawing.Point(371, 527);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 153);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(953, 714);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.supportButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -185,6 +200,7 @@ namespace Sprint3
             this.Text = "Fours LLC";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +221,7 @@ namespace Sprint3
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem confirmExitToolStripMenuItem;
         private System.Windows.Forms.Button supportButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -27,6 +27,7 @@ namespace Sprint3
             MainForm mainForm = new MainForm();
             LogInForm logInForm = new LogInForm();
             logInForm.Show();
+            this.Hide();
         }
 
         private void confirmExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace Sprint3
         {
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
+            this.Hide();
         }
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)

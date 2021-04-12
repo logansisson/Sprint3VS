@@ -43,9 +43,6 @@ namespace Sprint3
             this.tierLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.phoneLabel = new System.Windows.Forms.Label();
-            this.group4DataSet = new Sprint3.group4DataSet();
-            this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.albumsTableAdapter = new Sprint3.group4DataSetTableAdapters.AlbumsTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.trackLabel = new System.Windows.Forms.Label();
             this.logoutButton = new System.Windows.Forms.Button();
@@ -61,10 +58,15 @@ namespace Sprint3
             this.showAccountInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hideAccountInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
+            this.group4DataSet = new Sprint3.group4DataSet();
+            this.albumsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.albumsTableAdapter = new Sprint3.group4DataSetTableAdapters.AlbumsTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -193,20 +195,6 @@ namespace Sprint3
             this.phoneLabel.Text = "Phone";
             this.phoneLabel.Visible = false;
             // 
-            // group4DataSet
-            // 
-            this.group4DataSet.DataSetName = "group4DataSet";
-            this.group4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // albumsBindingSource
-            // 
-            this.albumsBindingSource.DataMember = "Albums";
-            this.albumsBindingSource.DataSource = this.group4DataSet;
-            // 
-            // albumsTableAdapter
-            // 
-            this.albumsTableAdapter.ClearBeforeFill = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -229,7 +217,7 @@ namespace Sprint3
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(506, 523);
+            this.logoutButton.Location = new System.Drawing.Point(507, 407);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(115, 51);
             this.logoutButton.TabIndex = 14;
@@ -330,7 +318,7 @@ namespace Sprint3
             this.showAccountInfoToolStripMenuItem,
             this.hideAccountInfoToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // showAccountInfoToolStripMenuItem
@@ -350,15 +338,41 @@ namespace Sprint3
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // group4DataSet
+            // 
+            this.group4DataSet.DataSetName = "group4DataSet";
+            this.group4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // albumsBindingSource
+            // 
+            this.albumsBindingSource.DataMember = "Albums";
+            this.albumsBindingSource.DataSource = this.group4DataSet;
+            // 
+            // albumsTableAdapter
+            // 
+            this.albumsTableAdapter.ClearBeforeFill = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sprint3.Properties.Resources.fours;
+            this.pictureBox1.Location = new System.Drawing.Point(457, 504);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(198, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // TrendingAnalyticsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(1184, 680);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.displayCheckBox);
             this.Controls.Add(this.listensLabel);
             this.Controls.Add(this.groupBox1);
@@ -381,14 +395,15 @@ namespace Sprint3
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TrendingAnalyticsForm";
-            this.Text = "Trending Analytics";
+            this.Text = "Fours LLC - Trending Analytics";
             this.Load += new System.EventHandler(this.TrendingAnalyticsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,5 +441,6 @@ namespace Sprint3
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showAccountInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hideAccountInfoToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

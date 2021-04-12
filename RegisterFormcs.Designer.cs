@@ -367,7 +367,7 @@ namespace Sprint3
             // confirmExitToolStripMenuItem
             // 
             this.confirmExitToolStripMenuItem.Name = "confirmExitToolStripMenuItem";
-            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.confirmExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.confirmExitToolStripMenuItem.Text = "Confirm Exit";
             this.confirmExitToolStripMenuItem.Click += new System.EventHandler(this.confirmExitToolStripMenuItem_Click);
             // 
@@ -376,6 +376,7 @@ namespace Sprint3
             this.AcceptButton = this.continueButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(976, 676);
             this.Controls.Add(this.ccvTextBox);
             this.Controls.Add(this.label9);
@@ -402,7 +403,7 @@ namespace Sprint3
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
+            this.Text = "Fours LLC - Register";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

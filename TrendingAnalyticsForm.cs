@@ -73,6 +73,8 @@ namespace Sprint3
         private void logoutButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
         }
 
         private void hiphopRadioButton_CheckedChanged(object sender, EventArgs e)
