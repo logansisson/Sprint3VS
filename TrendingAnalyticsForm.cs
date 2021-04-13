@@ -62,6 +62,11 @@ namespace Sprint3
             {
                 trackLabel.Text = reader["title"].ToString();
                 reader.Close();
+                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
+                reader = command.ExecuteReader();
+                reader.Read();
+                trackLabel.Text += $" By {reader["name"].ToString()}";
+                reader.Close();
                 command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\"";
                 reader = command.ExecuteReader();
                 reader.Read();
@@ -95,6 +100,11 @@ namespace Sprint3
                 reader.Read();
                 trackLabel.Text = reader["title"].ToString();
                 reader.Close();
+                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
+                reader = command.ExecuteReader();
+                reader.Read();
+                trackLabel.Text += $" By {reader["name"].ToString()}";
+                reader.Close();
                 command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{punkRadioButton.Text}\"";
                 reader = command.ExecuteReader();
                 reader.Read();
@@ -107,6 +117,11 @@ namespace Sprint3
                 reader.Read();
                 trackLabel.Text = reader["title"].ToString();
                 reader.Close();
+                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
+                reader = command.ExecuteReader();
+                reader.Read();
+                trackLabel.Text += $" By {reader["name"].ToString()}";
+                reader.Close();
                 command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{countryRadioButton.Text}\"";
                 reader = command.ExecuteReader();
                 reader.Read();
@@ -118,6 +133,11 @@ namespace Sprint3
                 MySqlDataReader reader = command.ExecuteReader();
                 reader.Read();
                 trackLabel.Text = reader["title"].ToString();
+                reader.Close();
+                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
+                reader = command.ExecuteReader();
+                reader.Read();
+                trackLabel.Text += $" By {reader["name"].ToString()}";
                 reader.Close();
                 command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\"";
                 reader = command.ExecuteReader();

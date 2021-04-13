@@ -23,6 +23,34 @@ namespace Sprint3
         {
 
         }
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            isUser(usernameTextBox.Text);
+        }
+
+        public void isUser (string username)
+        {
+            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
+            builder.Server = "209.106.201.103";
+            builder.UserID = "dbstudent18";
+            builder.Password = "longwhale63";
+            builder.Database = "group4";
+            MySqlConnection connection = new MySqlConnection(builder.ToString());
+            MySqlCommand command = new MySqlCommand();
+            connection.Open();
+            command.Connection = connection;
+            command.CommandText = $"SELECT * FROM Customers WHERE username = '{username}'";
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            if (!(reader.HasRows) && usernameTextBox.Text != "" && !(usernameTextBox.Text.Contains(" ")))
+            {
+                usernameCheckBox.Checked = true;
+            }
+            else
+            {
+                usernameCheckBox.Checked = false;
+            }
+        }
 
         private void continueButton_Click(object sender, EventArgs e)
         {
@@ -91,7 +119,7 @@ namespace Sprint3
                                 {
                                     MessageBox.Show("Username already exists.");
                                 }
-                                else if (usernameTextBox.Text == "" || passwordTextBox.Text == "")
+                                else if (usernameTextBox.Text == "" || passwordTextBox.Text == "" || usernameTextBox.Text.Contains(" ") || passwordTextBox.Text.Contains(" "))
                                 {
                                     MessageBox.Show("Username or password cannot be blank. Please enter a valid value.");
                                     usernameTextBox.Focus();
