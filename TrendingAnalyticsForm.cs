@@ -20,6 +20,8 @@ namespace Sprint3
 
         private void TrendingAnalyticsForm_Load(object sender, EventArgs e)
         {
+            string weeklySong = "SELECT trackId, COUNT(isListened) AS counts FROM Interactions GROUP BY trackId HAVING counts = (SELECT MAX(trackCount) FROM (SELECT trackID, COUNT(isListened) AS trackCount FROM Interactions GROUP BY trackId) AS maxCount);";
+
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.Server = "209.106.201.103";
             builder.UserID = "dbstudent18";
@@ -29,9 +31,21 @@ namespace Sprint3
             MySqlCommand command = new MySqlCommand();
             connection.Open();
             command.Connection = connection;
+            command.CommandText = weeklySong;
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            string trackId = reader["trackId"].ToString();
+            string listens = reader["counts"].ToString();
+            reader.Close();
+            command.CommandText = $"SELECT title from Tracks where trackId = {trackId};";
+            reader = command.ExecuteReader();
+            reader.Read();
+            string title = reader["title"].ToString();
+            reader.Close();
+            weeklyLabel.Text = $"Title: {title} \nPlays: {listens}";
             command.CommandText = $"SELECT * FROM Customers WHERE username = \"{LogInForm.username}\"";
             usernameLabel.Text = LogInForm.username;
-            MySqlDataReader reader = command.ExecuteReader();
+            reader = command.ExecuteReader();
             string tierType;
             if (reader.Read())
             {

@@ -66,14 +66,6 @@ namespace Sprint3
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.usernameCheckBox = new System.Windows.Forms.CheckBox();
-            this.confirmPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.passwordCheckBox = new System.Windows.Forms.CheckBox();
-            this.emailCheckBox = new System.Windows.Forms.CheckBox();
-            this.phoneCheckBox = new System.Windows.Forms.CheckBox();
-            this.cardCheckBox = new System.Windows.Forms.CheckBox();
-            this.expireCheckBox = new System.Windows.Forms.CheckBox();
-            this.cvvCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -147,7 +139,6 @@ namespace Sprint3
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(285, 29);
             this.usernameTextBox.TabIndex = 0;
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // passwordTextBox
             // 
@@ -182,7 +173,6 @@ namespace Sprint3
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(182, 29);
             this.phoneTextBox.TabIndex = 5;
-            this.phoneTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // continueButton
             // 
@@ -424,79 +414,6 @@ namespace Sprint3
             this.label13.TabIndex = 25;
             this.label13.Text = "ex. 21/04 (equal to or after current month)";
             // 
-            // usernameCheckBox
-            // 
-            this.usernameCheckBox.AutoSize = true;
-            this.usernameCheckBox.Enabled = false;
-            this.usernameCheckBox.Location = new System.Drawing.Point(675, 125);
-            this.usernameCheckBox.Name = "usernameCheckBox";
-            this.usernameCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.usernameCheckBox.TabIndex = 26;
-            this.usernameCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // confirmPasswordCheckBox
-            // 
-            this.confirmPasswordCheckBox.AutoSize = true;
-            this.confirmPasswordCheckBox.Location = new System.Drawing.Point(675, 207);
-            this.confirmPasswordCheckBox.Name = "confirmPasswordCheckBox";
-            this.confirmPasswordCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.confirmPasswordCheckBox.TabIndex = 27;
-            this.confirmPasswordCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // passwordCheckBox
-            // 
-            this.passwordCheckBox.AutoSize = true;
-            this.passwordCheckBox.Location = new System.Drawing.Point(675, 166);
-            this.passwordCheckBox.Name = "passwordCheckBox";
-            this.passwordCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.passwordCheckBox.TabIndex = 27;
-            this.passwordCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // emailCheckBox
-            // 
-            this.emailCheckBox.AutoSize = true;
-            this.emailCheckBox.Location = new System.Drawing.Point(675, 245);
-            this.emailCheckBox.Name = "emailCheckBox";
-            this.emailCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.emailCheckBox.TabIndex = 28;
-            this.emailCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // phoneCheckBox
-            // 
-            this.phoneCheckBox.AutoSize = true;
-            this.phoneCheckBox.Location = new System.Drawing.Point(571, 286);
-            this.phoneCheckBox.Name = "phoneCheckBox";
-            this.phoneCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.phoneCheckBox.TabIndex = 29;
-            this.phoneCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // cardCheckBox
-            // 
-            this.cardCheckBox.AutoSize = true;
-            this.cardCheckBox.Location = new System.Drawing.Point(674, 340);
-            this.cardCheckBox.Name = "cardCheckBox";
-            this.cardCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.cardCheckBox.TabIndex = 30;
-            this.cardCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // expireCheckBox
-            // 
-            this.expireCheckBox.AutoSize = true;
-            this.expireCheckBox.Location = new System.Drawing.Point(490, 386);
-            this.expireCheckBox.Name = "expireCheckBox";
-            this.expireCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.expireCheckBox.TabIndex = 31;
-            this.expireCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // cvvCheckBox
-            // 
-            this.cvvCheckBox.AutoSize = true;
-            this.cvvCheckBox.Location = new System.Drawing.Point(450, 430);
-            this.cvvCheckBox.Name = "cvvCheckBox";
-            this.cvvCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.cvvCheckBox.TabIndex = 32;
-            this.cvvCheckBox.UseVisualStyleBackColor = true;
-            // 
             // RegisterForm
             // 
             this.AcceptButton = this.continueButton;
@@ -504,14 +421,6 @@ namespace Sprint3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(976, 676);
-            this.Controls.Add(this.cvvCheckBox);
-            this.Controls.Add(this.expireCheckBox);
-            this.Controls.Add(this.cardCheckBox);
-            this.Controls.Add(this.phoneCheckBox);
-            this.Controls.Add(this.emailCheckBox);
-            this.Controls.Add(this.passwordCheckBox);
-            this.Controls.Add(this.confirmPasswordCheckBox);
-            this.Controls.Add(this.usernameCheckBox);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -591,13 +500,5 @@ namespace Sprint3
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.CheckBox usernameCheckBox;
-        private System.Windows.Forms.CheckBox confirmPasswordCheckBox;
-        private System.Windows.Forms.CheckBox passwordCheckBox;
-        private System.Windows.Forms.CheckBox emailCheckBox;
-        private System.Windows.Forms.CheckBox phoneCheckBox;
-        private System.Windows.Forms.CheckBox cardCheckBox;
-        private System.Windows.Forms.CheckBox expireCheckBox;
-        private System.Windows.Forms.CheckBox cvvCheckBox;
     }
 }

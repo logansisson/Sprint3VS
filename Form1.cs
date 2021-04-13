@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace Sprint3
 {
@@ -54,7 +55,8 @@ namespace Sprint3
 
         private void supportButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is not yet functional.");
+            SupportForm supportForm = new SupportForm();
+            supportForm.ShowDialog();
         }
     }
 }

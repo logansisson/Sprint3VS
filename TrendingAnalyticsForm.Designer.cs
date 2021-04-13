@@ -55,6 +55,8 @@ namespace Sprint3
             this.albumsTableAdapter = new Sprint3.group4DataSetTableAdapters.AlbumsTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.displayButton = new System.Windows.Forms.Button();
+            this.weeklyLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).BeginInit();
@@ -126,19 +128,20 @@ namespace Sprint3
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(279, 308);
+            this.label2.Location = new System.Drawing.Point(36, 271);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(456, 37);
+            this.label2.Size = new System.Drawing.Size(308, 74);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Most Played Track by Genre:";
+            this.label2.Text = "Most Played Track \r\nby Genre:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // trackLabel
             // 
             this.trackLabel.AutoSize = true;
-            this.trackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trackLabel.Location = new System.Drawing.Point(279, 375);
+            this.trackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trackLabel.Location = new System.Drawing.Point(47, 362);
             this.trackLabel.Name = "trackLabel";
-            this.trackLabel.Size = new System.Drawing.Size(102, 37);
+            this.trackLabel.Size = new System.Drawing.Size(86, 31);
             this.trackLabel.TabIndex = 13;
             this.trackLabel.Text = "label4";
             // 
@@ -157,7 +160,7 @@ namespace Sprint3
             this.groupBox1.Controls.Add(this.punkRadioButton);
             this.groupBox1.Controls.Add(this.countryRadioButton);
             this.groupBox1.Controls.Add(this.hiphopRadioButton);
-            this.groupBox1.Location = new System.Drawing.Point(387, 486);
+            this.groupBox1.Location = new System.Drawing.Point(100, 476);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(189, 141);
             this.groupBox1.TabIndex = 15;
@@ -202,10 +205,10 @@ namespace Sprint3
             // listensLabel
             // 
             this.listensLabel.AutoSize = true;
-            this.listensLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listensLabel.Location = new System.Drawing.Point(279, 434);
+            this.listensLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listensLabel.Location = new System.Drawing.Point(47, 421);
             this.listensLabel.Name = "listensLabel";
-            this.listensLabel.Size = new System.Drawing.Size(102, 37);
+            this.listensLabel.Size = new System.Drawing.Size(86, 31);
             this.listensLabel.TabIndex = 16;
             this.listensLabel.Text = "label4";
             // 
@@ -234,20 +237,20 @@ namespace Sprint3
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showAccountInfoToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // showAccountInfoToolStripMenuItem
             // 
             this.showAccountInfoToolStripMenuItem.Name = "showAccountInfoToolStripMenuItem";
-            this.showAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.showAccountInfoToolStripMenuItem.Text = "Show Account Info";
             this.showAccountInfoToolStripMenuItem.Click += new System.EventHandler(this.showAccountInfoToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -285,6 +288,27 @@ namespace Sprint3
             this.displayButton.UseVisualStyleBackColor = true;
             this.displayButton.Click += new System.EventHandler(this.displayButton_Click);
             // 
+            // weeklyLabel
+            // 
+            this.weeklyLabel.AutoSize = true;
+            this.weeklyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weeklyLabel.Location = new System.Drawing.Point(622, 362);
+            this.weeklyLabel.Name = "weeklyLabel";
+            this.weeklyLabel.Size = new System.Drawing.Size(68, 31);
+            this.weeklyLabel.TabIndex = 21;
+            this.weeklyLabel.Text = "Test";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(551, 261);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(308, 74);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Most Played Track \r\nthis Week:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // TrendingAnalyticsForm
             // 
             this.AcceptButton = this.displayButton;
@@ -292,6 +316,8 @@ namespace Sprint3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(935, 764);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.weeklyLabel);
             this.Controls.Add(this.displayButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listensLabel);
@@ -348,5 +374,7 @@ namespace Sprint3
         private System.Windows.Forms.ToolStripMenuItem showAccountInfoToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button displayButton;
+        private System.Windows.Forms.Label weeklyLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
