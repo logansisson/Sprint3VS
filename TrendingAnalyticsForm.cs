@@ -18,11 +18,12 @@ namespace Sprint3
             InitializeComponent();
         }
 
-        private void TrendingAnalyticsForm_Load(object sender, EventArgs e)
+        public void TrendingAnalyticsForm_Load(object sender, EventArgs e)
         {
-            string weeklySong = "SELECT Title, SUM(isLiked) as Likes, SUM(isListened) as Listens, SUM(isReposted) as Reposts, SUM(isCommented) as Comments FROM Interactions LEFT JOIN Tracks ON Interactions.trackId = Tracks.trackId GROUP BY Title;";
+            string weeklySong = "SELECT * From Weekly_Stats;";
             var titleList = new List<String>();
             var listenList = new List<String>();
+            var likedList = new List<String>();
             var repostList = new List<String>();
             var commentList = new List<String>();
 
@@ -41,17 +42,23 @@ namespace Sprint3
             while (reader.Read())
             {
                 titleList.Add(reader["Title"].ToString());
-                listenList.Add(reader["Likes"].ToString());
-                repostList.Add(reader["Reposts"].ToString());
-                commentList.Add(reader["Comments"].ToString());
+                listenList.Add(reader["SUM(isListened)"].ToString());
+                likedList.Add(reader["SUM(isLiked)"].ToString());
+                repostList.Add(reader["SUM(isReposted)"].ToString());
+                commentList.Add(reader["SUM(isCommented)"].ToString());
             }
             reader.Close();
-            //command.CommandText = $"SELECT title from Tracks where trackId = {trackId};";
-            reader = command.ExecuteReader();
-            reader.Read();
-            //string title = reader["title"].ToString();
-            reader.Close();
-            weeklyLabel.Text = $"Title:  \nPlays: ";
+            var titleArray = titleList.ToArray();
+            var listenArray = listenList.ToArray();
+            var likedArray = likedList.ToArray();
+            var repostArray = repostList.ToArray();
+            var commentArray = commentList.ToArray();
+            for (int i = 0; i < titleArray.Count(); i++)
+            {
+                titleListBox.Items.Add(titleArray[i]);
+            }
+            titleListBox.SelectedIndex = 0;
+            weeklyLabel.Text = listenArray[titleListBox.SelectedIndex];
             command.CommandText = $"SELECT * FROM Customers WHERE username = \"{LogInForm.username}\"";
             usernameLabel.Text = LogInForm.username;
             reader = command.ExecuteReader();
@@ -79,7 +86,7 @@ namespace Sprint3
                 }
              }
             reader.Close();
-            command.CommandText = $"SELECT title FROM Tracks where listens = (SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\")";
+            command.CommandText = $"SELECT title FROM Monthly_Stats where SUM(isListened) = (SELECT MAX() AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\")";
             reader = command.ExecuteReader();
             if (reader.Read())
             {
@@ -192,6 +199,11 @@ namespace Sprint3
         private void showAccountInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             displayButton_Click(sender, e);
+        }
+
+        public void titleListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

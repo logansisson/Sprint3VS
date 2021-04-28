@@ -57,6 +57,7 @@ namespace Sprint3
             this.displayButton = new System.Windows.Forms.Button();
             this.weeklyLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.titleListBox = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).BeginInit();
@@ -292,7 +293,7 @@ namespace Sprint3
             // 
             this.weeklyLabel.AutoSize = true;
             this.weeklyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weeklyLabel.Location = new System.Drawing.Point(622, 362);
+            this.weeklyLabel.Location = new System.Drawing.Point(640, 378);
             this.weeklyLabel.Name = "weeklyLabel";
             this.weeklyLabel.Size = new System.Drawing.Size(68, 31);
             this.weeklyLabel.TabIndex = 21;
@@ -304,10 +305,19 @@ namespace Sprint3
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(551, 261);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 74);
+            this.label1.Size = new System.Drawing.Size(325, 74);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Most Played Track \r\nthis Week:";
+            this.label1.Text = "Most Played Tracks \r\nthis Week:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // titleListBox
+            // 
+            this.titleListBox.FormattingEnabled = true;
+            this.titleListBox.Location = new System.Drawing.Point(433, 378);
+            this.titleListBox.Name = "titleListBox";
+            this.titleListBox.Size = new System.Drawing.Size(172, 134);
+            this.titleListBox.TabIndex = 23;
+            this.titleListBox.SelectedIndexChanged += new System.EventHandler(this.titleListBox_SelectedIndexChanged);
             // 
             // TrendingAnalyticsForm
             // 
@@ -316,6 +326,7 @@ namespace Sprint3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(935, 764);
+            this.Controls.Add(this.titleListBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.weeklyLabel);
             this.Controls.Add(this.displayButton);
@@ -376,5 +387,6 @@ namespace Sprint3
         private System.Windows.Forms.Button displayButton;
         private System.Windows.Forms.Label weeklyLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox titleListBox;
     }
 }
