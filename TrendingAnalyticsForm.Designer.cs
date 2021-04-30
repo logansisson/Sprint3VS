@@ -293,7 +293,7 @@ namespace Sprint3
             // 
             this.weeklyLabel.AutoSize = true;
             this.weeklyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weeklyLabel.Location = new System.Drawing.Point(640, 378);
+            this.weeklyLabel.Location = new System.Drawing.Point(765, 386);
             this.weeklyLabel.Name = "weeklyLabel";
             this.weeklyLabel.Size = new System.Drawing.Size(68, 31);
             this.weeklyLabel.TabIndex = 21;
@@ -313,7 +313,7 @@ namespace Sprint3
             // titleListBox
             // 
             this.titleListBox.FormattingEnabled = true;
-            this.titleListBox.Location = new System.Drawing.Point(433, 378);
+            this.titleListBox.Location = new System.Drawing.Point(558, 386);
             this.titleListBox.Name = "titleListBox";
             this.titleListBox.Size = new System.Drawing.Size(172, 134);
             this.titleListBox.TabIndex = 23;

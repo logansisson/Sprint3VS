@@ -18,14 +18,28 @@ namespace Sprint3
             InitializeComponent();
         }
 
+        class MyVariables 
+        {
+            public static List<String> titleList = new List<String>();
+            public static List<String> listenList = new List<String>();
+            public static List<String> likedList = new List<String>();
+            public static List<String> repostList = new List<String>();
+            public static List<String> commentList = new List<String>();
+        }
+
+        public void getNewRecord()
+        {
+            var titleArray = MyVariables.titleList.ToArray();
+            var listenArray = MyVariables.listenList.ToArray();
+            var likedArray = MyVariables.likedList.ToArray();
+            var repostArray = MyVariables.repostList.ToArray();
+            var commentArray = MyVariables.commentList.ToArray();
+            weeklyLabel.Text = $"{listenArray[titleListBox.SelectedIndex]}0,000 streams";
+        }
+
         public void TrendingAnalyticsForm_Load(object sender, EventArgs e)
         {
             string weeklySong = "SELECT * From Weekly_Stats;";
-            var titleList = new List<String>();
-            var listenList = new List<String>();
-            var likedList = new List<String>();
-            var repostList = new List<String>();
-            var commentList = new List<String>();
 
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.Server = "209.106.201.103";
@@ -41,24 +55,24 @@ namespace Sprint3
             reader.Read();
             while (reader.Read())
             {
-                titleList.Add(reader["Title"].ToString());
-                listenList.Add(reader["SUM(isListened)"].ToString());
-                likedList.Add(reader["SUM(isLiked)"].ToString());
-                repostList.Add(reader["SUM(isReposted)"].ToString());
-                commentList.Add(reader["SUM(isCommented)"].ToString());
+                MyVariables.titleList.Add(reader["Title"].ToString());
+                MyVariables.listenList.Add(reader["Listens"].ToString());
+                MyVariables.likedList.Add(reader["likes"].ToString());
+                MyVariables.repostList.Add(reader["reposts"].ToString());
+                MyVariables.commentList.Add(reader["comments"].ToString());
             }
             reader.Close();
-            var titleArray = titleList.ToArray();
-            var listenArray = listenList.ToArray();
-            var likedArray = likedList.ToArray();
-            var repostArray = repostList.ToArray();
-            var commentArray = commentList.ToArray();
+            var titleArray = MyVariables.titleList.ToArray();
+            var listenArray = MyVariables.listenList.ToArray();
+            var likedArray = MyVariables.likedList.ToArray();
+            var repostArray = MyVariables.repostList.ToArray();
+            var commentArray = MyVariables.commentList.ToArray();
             for (int i = 0; i < titleArray.Count(); i++)
             {
                 titleListBox.Items.Add(titleArray[i]);
             }
             titleListBox.SelectedIndex = 0;
-            weeklyLabel.Text = listenArray[titleListBox.SelectedIndex];
+            weeklyLabel.Text = $"{listenArray[titleListBox.SelectedIndex]}0,000 streams";
             command.CommandText = $"SELECT * FROM Customers WHERE username = \"{LogInForm.username}\"";
             usernameLabel.Text = LogInForm.username;
             reader = command.ExecuteReader();
@@ -86,13 +100,13 @@ namespace Sprint3
                 }
              }
             reader.Close();
-            command.CommandText = $"SELECT title FROM Monthly_Stats where SUM(isListened) = (SELECT MAX() AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\")";
+            command.CommandText = $"select Title, Listens from Weekly_Stats WHERE Listens = (Select MAX(Listens) From Weekly_Stats);";
             reader = command.ExecuteReader();
             if (reader.Read())
             {
-                trackLabel.Text = reader["title"].ToString();
+                trackLabel.Text = reader["Title"].ToString();
                 reader.Close();
-                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
+                /*command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
                 reader = command.ExecuteReader();
                 reader.Read();
                 trackLabel.Text += $" By {reader["name"].ToString()}";
@@ -101,6 +115,7 @@ namespace Sprint3
                 reader = command.ExecuteReader();
                 reader.Read();
                 listensLabel.Text = reader["maxListens"].ToString() + " streams";
+                */
             }
             reader.Close();
         }
@@ -203,7 +218,7 @@ namespace Sprint3
 
         public void titleListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            getNewRecord();
         }
     }
 }
