@@ -40,11 +40,6 @@ namespace Sprint3
             this.label2 = new System.Windows.Forms.Label();
             this.trackLabel = new System.Windows.Forms.Label();
             this.logoutButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.punkRadioButton = new System.Windows.Forms.RadioButton();
-            this.countryRadioButton = new System.Windows.Forms.RadioButton();
-            this.hiphopRadioButton = new System.Windows.Forms.RadioButton();
-            this.listensLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +53,7 @@ namespace Sprint3
             this.weeklyLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.titleListBox = new System.Windows.Forms.ListBox();
-            this.groupBox1.SuspendLayout();
+            this.monthlyListBox = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumsBindingSource)).BeginInit();
@@ -69,9 +64,10 @@ namespace Sprint3
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(12, 66);
+            this.usernameLabel.Location = new System.Drawing.Point(18, 102);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(0, 24);
+            this.usernameLabel.Size = new System.Drawing.Size(0, 33);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Visible = false;
             // 
@@ -79,9 +75,10 @@ namespace Sprint3
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(12, 123);
+            this.passwordLabel.Location = new System.Drawing.Point(18, 189);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(0, 24);
+            this.passwordLabel.Size = new System.Drawing.Size(0, 33);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Visible = false;
             // 
@@ -89,9 +86,10 @@ namespace Sprint3
             // 
             this.paymentInfoLabel.AutoSize = true;
             this.paymentInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentInfoLabel.Location = new System.Drawing.Point(12, 179);
+            this.paymentInfoLabel.Location = new System.Drawing.Point(18, 275);
+            this.paymentInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.paymentInfoLabel.Name = "paymentInfoLabel";
-            this.paymentInfoLabel.Size = new System.Drawing.Size(0, 24);
+            this.paymentInfoLabel.Size = new System.Drawing.Size(0, 33);
             this.paymentInfoLabel.TabIndex = 5;
             this.paymentInfoLabel.Visible = false;
             // 
@@ -99,9 +97,10 @@ namespace Sprint3
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(12, 226);
+            this.emailLabel.Location = new System.Drawing.Point(18, 348);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(0, 24);
+            this.emailLabel.Size = new System.Drawing.Size(0, 33);
             this.emailLabel.TabIndex = 7;
             this.emailLabel.Visible = false;
             // 
@@ -109,9 +108,10 @@ namespace Sprint3
             // 
             this.tierLabel.AutoSize = true;
             this.tierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tierLabel.Location = new System.Drawing.Point(12, 281);
+            this.tierLabel.Location = new System.Drawing.Point(18, 432);
+            this.tierLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tierLabel.Name = "tierLabel";
-            this.tierLabel.Size = new System.Drawing.Size(0, 24);
+            this.tierLabel.Size = new System.Drawing.Size(0, 33);
             this.tierLabel.TabIndex = 9;
             this.tierLabel.Visible = false;
             // 
@@ -119,9 +119,10 @@ namespace Sprint3
             // 
             this.phoneLabel.AutoSize = true;
             this.phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneLabel.Location = new System.Drawing.Point(12, 330);
+            this.phoneLabel.Location = new System.Drawing.Point(18, 508);
+            this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(0, 24);
+            this.phoneLabel.Size = new System.Drawing.Size(0, 33);
             this.phoneLabel.TabIndex = 11;
             this.phoneLabel.Visible = false;
             // 
@@ -129,98 +130,46 @@ namespace Sprint3
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 271);
+            this.label2.Location = new System.Drawing.Point(194, 402);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(308, 74);
+            this.label2.Size = new System.Drawing.Size(477, 110);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Most Played Track \r\nby Genre:";
+            this.label2.Text = "Most Played Tracks \r\nthis Month:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // trackLabel
             // 
             this.trackLabel.AutoSize = true;
             this.trackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trackLabel.Location = new System.Drawing.Point(47, 362);
+            this.trackLabel.Location = new System.Drawing.Point(488, 594);
+            this.trackLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.trackLabel.Name = "trackLabel";
-            this.trackLabel.Size = new System.Drawing.Size(86, 31);
+            this.trackLabel.Size = new System.Drawing.Size(132, 47);
             this.trackLabel.TabIndex = 13;
             this.trackLabel.Text = "label4";
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(522, 662);
+            this.logoutButton.Location = new System.Drawing.Point(909, 1018);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(115, 51);
+            this.logoutButton.Size = new System.Drawing.Size(172, 78);
             this.logoutButton.TabIndex = 14;
             this.logoutButton.Text = "Log Out";
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.punkRadioButton);
-            this.groupBox1.Controls.Add(this.countryRadioButton);
-            this.groupBox1.Controls.Add(this.hiphopRadioButton);
-            this.groupBox1.Location = new System.Drawing.Point(100, 476);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(189, 141);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Select a Genre:";
-            // 
-            // punkRadioButton
-            // 
-            this.punkRadioButton.AutoSize = true;
-            this.punkRadioButton.Location = new System.Drawing.Point(18, 106);
-            this.punkRadioButton.Name = "punkRadioButton";
-            this.punkRadioButton.Size = new System.Drawing.Size(50, 17);
-            this.punkRadioButton.TabIndex = 2;
-            this.punkRadioButton.Text = "Punk";
-            this.punkRadioButton.UseVisualStyleBackColor = true;
-            this.punkRadioButton.CheckedChanged += new System.EventHandler(this.punkRadioButton_CheckedChanged);
-            // 
-            // countryRadioButton
-            // 
-            this.countryRadioButton.AutoSize = true;
-            this.countryRadioButton.Location = new System.Drawing.Point(18, 72);
-            this.countryRadioButton.Name = "countryRadioButton";
-            this.countryRadioButton.Size = new System.Drawing.Size(61, 17);
-            this.countryRadioButton.TabIndex = 1;
-            this.countryRadioButton.Text = "Country";
-            this.countryRadioButton.UseVisualStyleBackColor = true;
-            this.countryRadioButton.CheckedChanged += new System.EventHandler(this.countryRadioButton_CheckedChanged);
-            // 
-            // hiphopRadioButton
-            // 
-            this.hiphopRadioButton.AutoSize = true;
-            this.hiphopRadioButton.Checked = true;
-            this.hiphopRadioButton.Location = new System.Drawing.Point(18, 36);
-            this.hiphopRadioButton.Name = "hiphopRadioButton";
-            this.hiphopRadioButton.Size = new System.Drawing.Size(62, 17);
-            this.hiphopRadioButton.TabIndex = 0;
-            this.hiphopRadioButton.TabStop = true;
-            this.hiphopRadioButton.Text = "Hip hop";
-            this.hiphopRadioButton.UseVisualStyleBackColor = true;
-            this.hiphopRadioButton.CheckedChanged += new System.EventHandler(this.hiphopRadioButton_CheckedChanged);
-            // 
-            // listensLabel
-            // 
-            this.listensLabel.AutoSize = true;
-            this.listensLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listensLabel.Location = new System.Drawing.Point(47, 421);
-            this.listensLabel.Name = "listensLabel";
-            this.listensLabel.Size = new System.Drawing.Size(86, 31);
-            this.listensLabel.TabIndex = 16;
-            this.listensLabel.Text = "label4";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Silver;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(935, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1683, 35);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -230,7 +179,7 @@ namespace Sprint3
             this.viewToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // viewToolStripMenuItem
@@ -238,20 +187,20 @@ namespace Sprint3
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showAccountInfoToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // showAccountInfoToolStripMenuItem
             // 
             this.showAccountInfoToolStripMenuItem.Name = "showAccountInfoToolStripMenuItem";
-            this.showAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.showAccountInfoToolStripMenuItem.Size = new System.Drawing.Size(265, 34);
             this.showAccountInfoToolStripMenuItem.Text = "Show Account Info";
             this.showAccountInfoToolStripMenuItem.Click += new System.EventHandler(this.showAccountInfoToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -272,18 +221,20 @@ namespace Sprint3
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sprint3.Properties.Resources.fours;
-            this.pictureBox1.Location = new System.Drawing.Point(378, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(693, 102);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 252);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
             // displayButton
             // 
-            this.displayButton.Location = new System.Drawing.Point(319, 662);
+            this.displayButton.Location = new System.Drawing.Point(604, 1018);
+            this.displayButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.displayButton.Name = "displayButton";
-            this.displayButton.Size = new System.Drawing.Size(115, 51);
+            this.displayButton.Size = new System.Drawing.Size(172, 78);
             this.displayButton.TabIndex = 20;
             this.displayButton.Text = "Show Account Information";
             this.displayButton.UseVisualStyleBackColor = true;
@@ -293,9 +244,10 @@ namespace Sprint3
             // 
             this.weeklyLabel.AutoSize = true;
             this.weeklyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weeklyLabel.Location = new System.Drawing.Point(765, 386);
+            this.weeklyLabel.Location = new System.Drawing.Point(1274, 594);
+            this.weeklyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.weeklyLabel.Name = "weeklyLabel";
-            this.weeklyLabel.Size = new System.Drawing.Size(68, 31);
+            this.weeklyLabel.Size = new System.Drawing.Size(100, 47);
             this.weeklyLabel.TabIndex = 21;
             this.weeklyLabel.Text = "Test";
             // 
@@ -303,9 +255,10 @@ namespace Sprint3
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(551, 261);
+            this.label1.Location = new System.Drawing.Point(952, 402);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 74);
+            this.label1.Size = new System.Drawing.Size(477, 110);
             this.label1.TabIndex = 22;
             this.label1.Text = "Most Played Tracks \r\nthis Week:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -313,26 +266,38 @@ namespace Sprint3
             // titleListBox
             // 
             this.titleListBox.FormattingEnabled = true;
-            this.titleListBox.Location = new System.Drawing.Point(558, 386);
+            this.titleListBox.ItemHeight = 20;
+            this.titleListBox.Location = new System.Drawing.Point(963, 594);
+            this.titleListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.titleListBox.Name = "titleListBox";
-            this.titleListBox.Size = new System.Drawing.Size(172, 134);
+            this.titleListBox.Size = new System.Drawing.Size(256, 204);
             this.titleListBox.TabIndex = 23;
             this.titleListBox.SelectedIndexChanged += new System.EventHandler(this.titleListBox_SelectedIndexChanged);
+            // 
+            // monthlyListBox
+            // 
+            this.monthlyListBox.FormattingEnabled = true;
+            this.monthlyListBox.ItemHeight = 20;
+            this.monthlyListBox.Location = new System.Drawing.Point(181, 594);
+            this.monthlyListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.monthlyListBox.Name = "monthlyListBox";
+            this.monthlyListBox.Size = new System.Drawing.Size(256, 204);
+            this.monthlyListBox.TabIndex = 24;
+            this.monthlyListBox.SelectedIndexChanged += new System.EventHandler(this.monthlyListBox_SelectedIndexChanged);
             // 
             // TrendingAnalyticsForm
             // 
             this.AcceptButton = this.displayButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(935, 764);
+            this.ClientSize = new System.Drawing.Size(1683, 1220);
+            this.Controls.Add(this.monthlyListBox);
             this.Controls.Add(this.titleListBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.weeklyLabel);
             this.Controls.Add(this.displayButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listensLabel);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.trackLabel);
             this.Controls.Add(this.label2);
@@ -345,11 +310,10 @@ namespace Sprint3
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TrendingAnalyticsForm";
             this.Text = " ";
             this.Load += new System.EventHandler(this.TrendingAnalyticsForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.group4DataSet)).EndInit();
@@ -373,11 +337,6 @@ namespace Sprint3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label trackLabel;
         private System.Windows.Forms.Button logoutButton;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton punkRadioButton;
-        private System.Windows.Forms.RadioButton countryRadioButton;
-        private System.Windows.Forms.RadioButton hiphopRadioButton;
-        private System.Windows.Forms.Label listensLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
@@ -388,5 +347,6 @@ namespace Sprint3
         private System.Windows.Forms.Label weeklyLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox titleListBox;
+        private System.Windows.Forms.ListBox monthlyListBox;
     }
 }

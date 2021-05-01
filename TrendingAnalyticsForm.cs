@@ -25,6 +25,8 @@ namespace Sprint3
             public static List<String> likedList = new List<String>();
             public static List<String> repostList = new List<String>();
             public static List<String> commentList = new List<String>();
+            public static string[] monthlyListens = new string[12];
+            public static int index = 0;
         }
 
         public void getNewRecord()
@@ -100,24 +102,17 @@ namespace Sprint3
                 }
              }
             reader.Close();
-            command.CommandText = $"select Title, Listens from Weekly_Stats WHERE Listens = (Select MAX(Listens) From Weekly_Stats);";
+            command.CommandText = $"select Title, Listens from Monthly_Stats;";
             reader = command.ExecuteReader();
-            if (reader.Read())
+            while (reader.Read())
             {
-                trackLabel.Text = reader["Title"].ToString();
-                reader.Close();
-                /*command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                trackLabel.Text += $" By {reader["name"].ToString()}";
-                reader.Close();
-                command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                listensLabel.Text = reader["maxListens"].ToString() + " streams";
-                */
+                monthlyListBox.Items.Add(reader["Title"].ToString());
+                MyVariables.monthlyListens.SetValue(reader["Listens"].ToString(), MyVariables.index);
+                MyVariables.index++;
             }
             reader.Close();
+            monthlyListBox.SelectedIndex = 0;
+            monthlyListBox_SelectedIndexChanged(sender, e);
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -125,80 +120,6 @@ namespace Sprint3
             this.Close();
             MainForm mainForm = new MainForm();
             mainForm.Show();
-        }
-
-        private void hiphopRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = "209.106.201.103";
-            builder.UserID = "dbstudent18";
-            builder.Password = "longwhale63";
-            builder.Database = "group4";
-            MySqlConnection connection = new MySqlConnection(builder.ToString());
-            MySqlCommand command = new MySqlCommand();
-            connection.Open();
-            command.Connection = connection;
-            if (punkRadioButton.Checked)
-            {
-                command.CommandText = $"SELECT title FROM Tracks where listens = (SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{punkRadioButton.Text}\")";
-                MySqlDataReader reader = command.ExecuteReader();
-                reader.Read();
-                trackLabel.Text = reader["title"].ToString();
-                reader.Close();
-                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                trackLabel.Text += $" By {reader["name"].ToString()}";
-                reader.Close();
-                command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{punkRadioButton.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                listensLabel.Text = reader["maxListens"].ToString() + " streams";
-            }
-            else if (countryRadioButton.Checked)
-            {
-                command.CommandText = $"SELECT title FROM Tracks where listens = (SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{countryRadioButton.Text}\")";
-                MySqlDataReader reader = command.ExecuteReader();
-                reader.Read();
-                trackLabel.Text = reader["title"].ToString();
-                reader.Close();
-                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                trackLabel.Text += $" By {reader["name"].ToString()}";
-                reader.Close();
-                command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{countryRadioButton.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                listensLabel.Text = reader["maxListens"].ToString() + " streams";
-            }
-            else
-            {
-                command.CommandText = $"SELECT title FROM Tracks where listens = (SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\")";
-                MySqlDataReader reader = command.ExecuteReader();
-                reader.Read();
-                trackLabel.Text = reader["title"].ToString();
-                reader.Close();
-                command.CommandText = $"select Artists.name from Tracks INNER JOIN Albums ON Tracks.albumId = Albums.albumId INNER JOIN Artists on Albums.artistId = Artists.artistId WHERE Tracks.title = \"{trackLabel.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                trackLabel.Text += $" By {reader["name"].ToString()}";
-                reader.Close();
-                command.CommandText = $"SELECT MAX(listens) AS maxListens FROM Tracks WHERE genre = \"{hiphopRadioButton.Text}\"";
-                reader = command.ExecuteReader();
-                reader.Read();
-                listensLabel.Text = reader["maxListens"].ToString() + " streams";
-            }
-        }
-
-        private void countryRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            hiphopRadioButton_CheckedChanged(sender, e);
-        }
-
-        private void punkRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            hiphopRadioButton_CheckedChanged(sender, e);
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -219,6 +140,11 @@ namespace Sprint3
         public void titleListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             getNewRecord();
+        }
+
+        private void monthlyListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            trackLabel.Text = $"{MyVariables.monthlyListens[monthlyListBox.SelectedIndex]}0,000 streams";
         }
     }
 }
