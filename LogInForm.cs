@@ -95,5 +95,12 @@ namespace Sprint3
         {
             returnButton_Click(sender, e);
         }
+
+        private void passwordButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ResetPasswordForm resetPasswordForm = new ResetPasswordForm();
+            resetPasswordForm.Show();
+        }
     }
 }
