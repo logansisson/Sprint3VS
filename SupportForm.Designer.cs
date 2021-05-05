@@ -98,6 +98,7 @@ namespace Sprint3
             this.AcceptButton = this.submitButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.CancelButton = this.returnButton;
             this.ClientSize = new System.Drawing.Size(302, 396);
@@ -106,6 +107,7 @@ namespace Sprint3
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.topicComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SupportForm";
             this.Text = "Contact Support";
             this.ResumeLayout(false);

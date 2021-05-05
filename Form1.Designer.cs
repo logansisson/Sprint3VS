@@ -183,6 +183,7 @@ namespace Sprint3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(953, 714);
             this.Controls.Add(this.pictureBox1);
@@ -194,6 +195,7 @@ namespace Sprint3
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.logInButton);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";

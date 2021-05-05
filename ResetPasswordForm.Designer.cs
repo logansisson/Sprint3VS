@@ -43,56 +43,63 @@ namespace Sprint3
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(173, 225);
+            this.label1.Location = new System.Drawing.Point(115, 146);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(173, 297);
+            this.label2.Location = new System.Drawing.Point(115, 193);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email Address:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(173, 374);
+            this.label3.Location = new System.Drawing.Point(115, 243);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Card Number:";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(372, 222);
+            this.usernameTextBox.Location = new System.Drawing.Point(248, 144);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(294, 26);
+            this.usernameTextBox.Size = new System.Drawing.Size(197, 20);
             this.usernameTextBox.TabIndex = 0;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(372, 294);
+            this.emailTextBox.Location = new System.Drawing.Point(248, 191);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(294, 26);
+            this.emailTextBox.Size = new System.Drawing.Size(197, 20);
             this.emailTextBox.TabIndex = 1;
             // 
             // cardTextBox
             // 
-            this.cardTextBox.Location = new System.Drawing.Point(372, 371);
+            this.cardTextBox.Location = new System.Drawing.Point(248, 241);
+            this.cardTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cardTextBox.Name = "cardTextBox";
-            this.cardTextBox.Size = new System.Drawing.Size(294, 26);
+            this.cardTextBox.Size = new System.Drawing.Size(197, 20);
             this.cardTextBox.TabIndex = 2;
             // 
             // getPasswordButton
             // 
-            this.getPasswordButton.Location = new System.Drawing.Point(212, 570);
+            this.getPasswordButton.Location = new System.Drawing.Point(141, 370);
+            this.getPasswordButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.getPasswordButton.Name = "getPasswordButton";
-            this.getPasswordButton.Size = new System.Drawing.Size(153, 41);
+            this.getPasswordButton.Size = new System.Drawing.Size(102, 27);
             this.getPasswordButton.TabIndex = 6;
             this.getPasswordButton.Text = "Retrieve Password";
             this.getPasswordButton.UseVisualStyleBackColor = true;
@@ -101,9 +108,10 @@ namespace Sprint3
             // backButton
             // 
             this.backButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.backButton.Location = new System.Drawing.Point(478, 570);
+            this.backButton.Location = new System.Drawing.Point(319, 370);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(100, 41);
+            this.backButton.Size = new System.Drawing.Size(67, 27);
             this.backButton.TabIndex = 7;
             this.backButton.Text = "Go Back";
             this.backButton.UseVisualStyleBackColor = true;
@@ -112,11 +120,12 @@ namespace Sprint3
             // ResetPasswordForm
             // 
             this.AcceptButton = this.getPasswordButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.CancelButton = this.backButton;
-            this.ClientSize = new System.Drawing.Size(790, 750);
+            this.ClientSize = new System.Drawing.Size(527, 487);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.getPasswordButton);
             this.Controls.Add(this.cardTextBox);
@@ -125,7 +134,9 @@ namespace Sprint3
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ResetPasswordForm";
             this.Text = "Forgot Password";
             this.Load += new System.EventHandler(this.ResetPasswordForm_Load);

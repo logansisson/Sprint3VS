@@ -419,6 +419,7 @@ namespace Sprint3
             this.AcceptButton = this.continueButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(976, 676);
             this.Controls.Add(this.label13);
@@ -447,6 +448,7 @@ namespace Sprint3
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "RegisterForm";
